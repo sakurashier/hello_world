@@ -1,0 +1,22 @@
+//定义一个Circle类，有数据成员Radius（）-半径，成员函数GetArea（）-计算圆的面积，构造一个Circle的对象进行测试
+#include <iostream>
+using namespace std;
+#define PI 3.1415926
+//Circle类的定义
+class Circle{                  
+public:                          //外部接口，公有成员函数
+	double GetArea();            //Circle类成员函数的具体实现
+	double GetArea(double r){
+		Radius = r;
+		return PI*Radius*Radius;
+	}
+private:                         //私有数据成员
+	double Radius;	
+};
+//主函数
+int main(){
+	Circle ballon;
+	ballon.GetArea(2.0);
+	cout << "这个圆的面积是：" << ballon.GetArea() << endl;
+	return 0;
+}
